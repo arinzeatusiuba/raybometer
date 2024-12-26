@@ -48,7 +48,7 @@
         <!-- Logo Section -->
         <div class="col-lg-3 bg-dark d-none d-lg-block">
             <a href="index.html" class="navbar-brand d-flex align-items-center justify-content-start py-3 px-4">
-                <img src="./img/RABO LOGO.png" alt="Logo" style="height: 50px; width: auto; margin-right: 15px;">
+                <img src="./img/logo.png" alt="Logo" style="height: 50px; width: auto; margin-right: 15px;">
                 <h1 class="m-0 text-primary text-uppercase" style="font-size: 24px;">RAYBOMETER</h1>
             </a>
         </div>
@@ -182,19 +182,20 @@
             <div class="col-lg-6">
                 <div class="row g-3">
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="./img/square 1.jpg" style="margin-top: 25%;">
+                        <img class="img-fluid rounded w-100 h-100 wow zoomIn" data-wow-delay="0.1s" src="./img/square 1.jpg" style="object-fit: cover; margin-top: 25%;">
                     </div>
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="./img/squar2.JPG">
+                        <img class="img-fluid rounded w-100 h-100 wow zoomIn" data-wow-delay="0.3s" src="./img/squar2.JPG" style="object-fit: cover;">
                     </div>
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="./img/squar3.png">
+                        <img class="img-fluid rounded w-100 h-100 wow zoomIn" data-wow-delay="0.5s" src="./img/squar3.png" style="object-fit: cover;">
                     </div>
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="./img/sqyu4.jpg">
+                        <img class="img-fluid rounded w-100 h-100 wow zoomIn" data-wow-delay="0.7s" src="./img/sqyu4.jpg" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
@@ -373,13 +374,6 @@
                         </div>
                     </div>
                     <!-- Project 8 with clickable image for modal -->
-                    <div class="col-6 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="project-item rounded position-relative">
-                            <a data-bs-toggle="modal" data-bs-target="#videoModal8">
-                                <img src="./img/vid 8.jpg" class="img-fluid" alt="Project 8">
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -395,70 +389,6 @@
         </div>
     </div>
 </div>
-
-<!-- Video Modals Start -->
-<div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="videoModalLabel1">Project 1 Video</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="ratio ratio-16x9">
-                    <iframe id="video1" src="" title="YouTube video player" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModalLabel2" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="videoModalLabel2">Project 2 Video</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="ratio ratio-16x9">
-                    <iframe id="video2" src="" title="YouTube video player" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Add modals for Projects 3 to 8 in the same format -->
-
-<!-- Video Modals End -->
-
-<script>
-    // Add dynamic video loading and unloading for each modal
-    document.querySelectorAll('.modal').forEach(function (modal) {
-        modal.addEventListener('show.bs.modal', function (event) {
-            var videoId = this.getAttribute('id');
-            var iframe = this.querySelector('iframe');
-            var videoSrc = ''; // Set the appropriate video link dynamically
-
-            if (videoId === 'videoModal1') {
-                videoSrc = 'https://www.youtube.com/embed/KR7ICdt0CQ8';
-            } else if (videoId === 'videoModal2') {
-                videoSrc = 'https://www.youtube.com/embed/6E71kxTRSvM';
-            }
-            // Add other modal IDs and links as needed
-
-            iframe.setAttribute('src', videoSrc);
-        });
-
-        modal.addEventListener('hide.bs.modal', function () {
-            var iframe = this.querySelector('iframe');
-            iframe.setAttribute('src', ''); // Clear the src to stop the video
-        });
-    });
-</script>
-
-
 
 
 <!-- Service Start -->
